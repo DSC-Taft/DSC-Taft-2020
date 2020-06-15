@@ -5,8 +5,8 @@
 @import 'base/animation';
 @import 'base/base';
 @import 'base/typography';
-/*@import 'base/utilities';
-
+@import 'base/utilities';
+/*
 @import 'components/button';
 @import 'components/card';
 @import 'components/projects';
@@ -19,6 +19,5 @@
 @import 'layouts/footer';
 
 @import 'pages/about';
-@import 'pages/home';
-@import 'pages/projects';
 */
+@import 'pages/home';
