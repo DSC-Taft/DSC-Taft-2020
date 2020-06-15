@@ -65,6 +65,9 @@
             @include respond(tab-land){
                 margin-top: 5.6rem;
             }
+            @include respond(nav-brkpnt){
+                margin-top: 6rem;
+            }
     
         }
     
@@ -137,7 +140,7 @@
     }
 
     &-spacer{
-        display: block;
-        height: 9.6rem;
+       // display: block;
+     //   height: 9.6rem;
     }
 }
