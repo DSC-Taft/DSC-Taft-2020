@@ -26,7 +26,7 @@ html {
 body {
   box-sizing: border-box;
   position: relative;
-  font-family: ProductSans; }
+  font-family: 'Open Sans'; }
 
 @font-face {
   font-family: ProductSans;
@@ -36,8 +36,18 @@ body {
   font-style: normal;
   font-weight: normal; }
 
-/*@import 'base/utilities';
+.heading-text--main {
+  font-size: 6rem;
+  font-weight: 400; }
 
+.paragraph-text--main {
+  font-size: 2.4rem;
+  color: #2D2E31; }
+
+.margin-bottom-med {
+  margin-bottom: 3.2rem !important; }
+
+/*
 @import 'components/button';
 @import 'components/card';
 @import 'components/projects';
@@ -48,18 +58,20 @@ body {
 .header {
   background: linear-gradient(to left, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.8) 100%), url("../img/header.jpg");
   height: 100vh;
-  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
   background-size: cover;
-  background-position: center;
+  background-position: left;
   background-repeat: no-repeat;
-  padding: 3.6rem 7.2rem; }
+  padding: 3.6rem 7.2rem;
+  overflow-x: hidden; }
   .header__text {
     position: absolute;
-    bottom: 10%;
+    bottom: 8.5%;
     color: #FFF; }
     .header__text--main {
       font-size: 9.6rem;
-      font-weight: 600;
+      font-weight: 700;
       animation-name: moveInLeft;
       animation-duration: 1s;
       animation-timing-function: ease-out; }
@@ -71,17 +83,18 @@ body {
       font-weight: 100; }
 
 .navigation {
-  padding: 3.2rem 12.8rem 0rem;
+  padding: 3.0rem 9.6rem 0rem;
   width: 100%;
   position: fixed;
   z-index: 998;
   display: block;
   height: 9.6rem;
-  font-family: ProductSans;
+  font-family: 'Open Sans';
   background-color: #FFF; }
   @media only screen and (max-width: 79.5em) {
     .navigation {
-      height: 14.4rem; } }
+      height: 14.4rem;
+      padding: 2.4rem 9.6rem 0rem; } }
   @media only screen and (max-width: 65.94em) {
     .navigation {
       padding: 2.4rem 6.4rem 0rem; } }
@@ -89,14 +102,13 @@ body {
     .navigation {
       padding: 2.4rem 2.4rem 0rem; } }
   .navigation__logo {
-    padding-bottom: 0;
-    display: inline-block; }
-    @media only screen and (max-width: 94.1em) {
-      .navigation__logo {
-        margin-top: 0.6rem; } }
+    margin-top: -0.2rem;
+    display: inline-block;
+    width: 35.2rem; }
     @media only screen and (max-width: 79.5em) {
       .navigation__logo {
-        margin-top: 1.6rem; } }
+        margin-top: 1.6rem;
+        width: 51.2rem; } }
     @media only screen and (max-width: 65.94em) {
       .navigation__logo {
         width: 12.8rem;
@@ -104,13 +116,13 @@ body {
   .navigation__link {
     text-decoration: none;
     color: #676C72;
-    transition: all .4s; }
+    transition: color .8s; }
     .navigation__link::after {
       content: '';
       display: block;
       width: 0;
       height: 0.4rem;
-      margin-top: 3.6rem;
+      margin-top: 2.95rem;
       position: relative;
       background-color: #676C72;
       transition: width .4s;
@@ -119,13 +131,13 @@ body {
       padding-bottom: 0; }
       @media only screen and (max-width: 94.1em) {
         .navigation__link::after {
-          margin-top: 2.8rem; } }
+          margin-top: 3rem; } }
       @media only screen and (max-width: 79.5em) {
         .navigation__link::after {
-          margin-top: 5.6rem; } }
+          margin-top: 5.60rem; } }
       @media only screen and (max-width: 65.94em) {
         .navigation__link::after {
-          margin-top: 6rem; } }
+          margin-top: 5.2rem; } }
     .navigation__link:hover::after {
       width: 100%; }
     .navigation__link--color1:hover {
@@ -150,7 +162,7 @@ body {
     float: right; }
     @media only screen and (max-width: 94.1em) {
       .navigation__list {
-        margin-top: 0.8rem; } }
+        margin-top: 0rem; } }
     @media only screen and (max-width: 79.5em) {
       .navigation__list {
         margin-top: 2.8rem; } }
@@ -165,11 +177,17 @@ body {
       list-style: none;
       display: inline-block;
       padding: 0 1.6rem; }
+      .navigation__list ul li:last-child {
+        padding: 0 0 0 1.6rem; }
 
 /*
 @import 'layouts/footer';
 
 @import 'pages/about';
-@import 'pages/home';
-@import 'pages/projects';
 */
+.home-about {
+  padding: 12.8rem 25.6rem;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  background-color: #F1F3F4; }

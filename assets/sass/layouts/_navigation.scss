@@ -1,18 +1,20 @@
 .navigation{
 
 
-    padding: 3.2rem 12.8rem 0rem;
+    padding: 3.0rem 9.6rem 0rem;
     width: 100%;
     position: fixed;
     z-index: 998;
     display: block;
     height: 9.6rem;
-    font-family: ProductSans;
+    font-family: 'Open Sans';
     background-color: #FFF;
+
 
 
     @include respond(tab-land){
         height: 14.4rem;
+        padding: 2.4rem 9.6rem 0rem;
     }
     @include respond(nav-brkpnt){
         padding: 2.4rem 6.4rem 0rem;
@@ -25,13 +27,12 @@
 
 
     &__logo{
-        padding-bottom: 0;
+        margin-top: -0.2rem;
         display: inline-block;
-        @include respond(desktop){
-            margin-top: 0.6rem;
-        }
+        width: 35.2rem;
         @include respond(tab-land){
             margin-top: 1.6rem;
+            width: 51.2rem;
         }
         @include respond(nav-brkpnt){
             width: 12.8rem;
@@ -43,14 +44,14 @@
     &__link{
         text-decoration: none;
         color: #676C72;
-        transition: all .4s;
+        transition: color .8s;
         
         &::after{
             content: '';
             display: block;
             width: 0;
             height:0.4rem;
-            margin-top: 3.6rem;
+            margin-top: 2.95rem;
             position: relative;
             background-color: #676C72;
             transition: width .4s;
@@ -60,13 +61,13 @@
 
 
             @include respond(desktop){
-                margin-top: 2.8rem;
+                margin-top: 3rem;
             }
             @include respond(tab-land){
-                margin-top: 5.6rem;
+                margin-top: 5.60rem;
             }
             @include respond(nav-brkpnt){
-                margin-top: 6rem;
+                margin-top: 5.2rem;
             }
     
         }
@@ -116,7 +117,7 @@
         float: right;
 
         @include respond(desktop){
-            margin-top: 0.8rem;
+            margin-top: 0rem;
         }
         @include respond(tab-land){
             margin-top: 2.8rem;
@@ -135,6 +136,10 @@
                 list-style: none;
                 display: inline-block;
                 padding: 0 1.6rem;
+
+                &:last-child{
+                    padding: 0 0 0 1.6rem;
+                }
             }
         }
     }
