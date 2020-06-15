@@ -1,0 +1,28 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%; /* 1rem = 10px*/
+    @include respond(desktop){
+        font-size: 50%;
+    }
+    @include respond(tab-land){
+        font-size: 37.5%;
+    }
+
+}
+body{
+    box-sizing: border-box;
+    position: relative;
+    font-family: ProductSans;
+
+}
+
+
+
+::selection{
+//    color: $text-primary;
+//    background-color: $background-primary;
+}

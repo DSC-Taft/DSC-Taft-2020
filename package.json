@@ -1,0 +1,38 @@
+{
+  "name": "dsc-taft-2020",
+  "version": "1.0.0",
+  "description": "Main website for DSC Taft",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass assets/sass/main.scss assets/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass assets/sass/main.scss assets/css/style.comp.css",
+    "concat:css": "concat -o assets/css/style.concat.css assets/css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"> 100%\" -o assets/css/style.prefix.css assets/css/style.concat.css",
+    "compress:css": "node-sass assets/css/style.prefix.css assets/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSC-Taft/DSC-Taft-2020"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DSC-Taft/DSC-Taft-2020/issues"
+  },
+  "homepage": "https://github.com/DSC-Taft/DSC-Taft-2020#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1",
+    "postcss-cli-simple": "^3.0.1"
+  },
+  "dependencies": {},
+  "keywords": [
+    "Website"
+  ]
+}

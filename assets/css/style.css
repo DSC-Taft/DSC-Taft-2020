@@ -1,0 +1,178 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  80% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px*/ }
+  @media only screen and (max-width: 94.1em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 79.5em) {
+    html {
+      font-size: 37.5%; } }
+
+body {
+  box-sizing: border-box;
+  position: relative;
+  font-family: ProductSans; }
+
+@font-face {
+  font-family: ProductSans;
+  src: url(../fonts/ProductSans.ttf) format("ttf");
+  src: url(../fonts/ProductSans.woff) format("woff");
+  src: url(../fonts/ProductSans.woff2) format("woff2");
+  font-style: normal;
+  font-weight: normal; }
+
+/*@import 'base/utilities';
+
+@import 'components/button';
+@import 'components/card';
+@import 'components/projects';
+@import 'components/steps';
+
+@import 'layouts/grid';
+*/
+.header {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 100%), url("../img/header.png");
+  height: 87vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3.6rem 7.2rem; }
+  @media only screen and (max-width: 79.5em) {
+    .header {
+      height: 92vh; } }
+  .header__text {
+    position: absolute;
+    bottom: 10%;
+    color: #FFF; }
+    .header__text--main {
+      font-size: 9.6rem;
+      font-weight: 600;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out; }
+      .header__text--main span {
+        display: block; }
+    .header__text--sub {
+      margin-top: 1.6rem;
+      font-size: 3.2rem;
+      font-weight: 100; }
+
+.navigation {
+  padding: 3.2rem 12.8rem 0rem;
+  width: 100%;
+  position: fixed;
+  z-index: 998;
+  display: block;
+  height: 9.6rem;
+  font-family: ProductSans;
+  background-color: #FFF; }
+  @media only screen and (max-width: 79.5em) {
+    .navigation {
+      height: 14.4rem; } }
+  @media only screen and (max-width: 65.94em) {
+    .navigation {
+      padding: 2.4rem 6.4rem 0rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .navigation {
+      padding: 2.4rem 2.4rem 0rem; } }
+  .navigation__logo {
+    padding-bottom: 0;
+    display: inline-block; }
+    @media only screen and (max-width: 94.1em) {
+      .navigation__logo {
+        margin-top: 0.6rem; } }
+    @media only screen and (max-width: 79.5em) {
+      .navigation__logo {
+        margin-top: 1.6rem; } }
+    @media only screen and (max-width: 65.94em) {
+      .navigation__logo {
+        width: 12.8rem;
+        margin-top: 0rem; } }
+  .navigation__link {
+    text-decoration: none;
+    color: #676C72;
+    transition: all .4s; }
+    .navigation__link::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0.4rem;
+      margin-top: 3.6rem;
+      position: relative;
+      background-color: #676C72;
+      transition: width .4s;
+      border-radius: 0.8rem;
+      margin-bottom: 0;
+      padding-bottom: 0; }
+      @media only screen and (max-width: 94.1em) {
+        .navigation__link::after {
+          margin-top: 2.8rem; } }
+      @media only screen and (max-width: 79.5em) {
+        .navigation__link::after {
+          margin-top: 5.6rem; } }
+    .navigation__link:hover::after {
+      width: 100%; }
+    .navigation__link--color1:hover {
+      color: #EA4335; }
+      .navigation__link--color1:hover:hover::after {
+        background-color: #EA4335; }
+    .navigation__link--color2:hover {
+      color: #0F9D58; }
+      .navigation__link--color2:hover:hover::after {
+        background-color: #0F9D58; }
+    .navigation__link--color3:hover {
+      color: #4285F4; }
+      .navigation__link--color3:hover:hover::after {
+        background-color: #4285F4; }
+    .navigation__link--color4:hover {
+      color: #FBBC04; }
+      .navigation__link--color4:hover:hover::after {
+        background-color: #FBBC04; }
+  .navigation__list {
+    font-size: 2.4rem;
+    color: #676C72;
+    float: right; }
+    @media only screen and (max-width: 94.1em) {
+      .navigation__list {
+        margin-top: 0.8rem; } }
+    @media only screen and (max-width: 79.5em) {
+      .navigation__list {
+        margin-top: 2.8rem; } }
+    @media only screen and (max-width: 65.94em) {
+      .navigation__list {
+        margin-top: 3.2rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__list {
+        display: none;
+        visibility: hidden; } }
+    .navigation__list ul li {
+      list-style: none;
+      display: inline-block;
+      padding: 0 1.6rem; }
+  .navigation-spacer {
+    display: block;
+    height: 9.6rem; }
+
+/*
+@import 'layouts/footer';
+
+@import 'pages/about';
+@import 'pages/home';
+@import 'pages/projects';
+*/

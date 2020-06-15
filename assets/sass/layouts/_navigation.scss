@@ -1,0 +1,143 @@
+.navigation{
+
+
+    padding: 3.2rem 12.8rem 0rem;
+    width: 100%;
+    position: fixed;
+    z-index: 998;
+    display: block;
+    height: 9.6rem;
+    font-family: ProductSans;
+    background-color: #FFF;
+
+
+    @include respond(tab-land){
+        height: 14.4rem;
+    }
+    @include respond(nav-brkpnt){
+        padding: 2.4rem 6.4rem 0rem;
+
+    }
+    @include respond(tab-port){
+        padding: 2.4rem 2.4rem 0rem;
+
+    }
+
+
+    &__logo{
+        padding-bottom: 0;
+        display: inline-block;
+        @include respond(desktop){
+            margin-top: 0.6rem;
+        }
+        @include respond(tab-land){
+            margin-top: 1.6rem;
+        }
+        @include respond(nav-brkpnt){
+            width: 12.8rem;
+            margin-top: 0rem;
+        }
+
+        
+    }
+    &__link{
+        text-decoration: none;
+        color: #676C72;
+        transition: all .4s;
+        
+        &::after{
+            content: '';
+            display: block;
+            width: 0;
+            height:0.4rem;
+            margin-top: 3.6rem;
+            position: relative;
+            background-color: #676C72;
+            transition: width .4s;
+            border-radius: 0.8rem;
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+
+            @include respond(desktop){
+                margin-top: 2.8rem;
+            }
+            @include respond(tab-land){
+                margin-top: 5.6rem;
+            }
+    
+        }
+    
+       
+        &:hover::after{
+            width: 100%;
+        
+        }
+        &--color1:hover{
+            color: #EA4335;
+            
+            &:hover::after{
+                background-color: #EA4335;
+            }
+        }
+
+        &--color2:hover{
+            color: #0F9D58;
+            
+            &:hover::after{
+                background-color: #0F9D58;
+            }
+        }
+        
+        &--color3:hover{
+            color: #4285F4;
+            
+            &:hover::after{
+                background-color: #4285F4;
+            }
+        }
+        &--color4:hover{
+            color: #FBBC04;
+            
+            &:hover::after{
+                background-color: #FBBC04;
+            }
+        }
+
+    }
+
+
+    &__list{
+        font-size: 2.4rem;
+        color: #676C72;
+        float: right;
+
+        @include respond(desktop){
+            margin-top: 0.8rem;
+        }
+        @include respond(tab-land){
+            margin-top: 2.8rem;
+        }
+        @include respond(nav-brkpnt){
+            margin-top: 3.2rem;
+        }   
+        @include respond(tab-port){
+            display: none;
+            visibility: hidden;
+        }   
+
+
+        ul{
+            li{
+                list-style: none;
+                display: inline-block;
+                padding: 0 1.6rem;
+            }
+        }
+    }
+
+    &-spacer{
+        display: block;
+        height: 9.6rem;
+    }
+}
