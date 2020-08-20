@@ -1,10 +1,38 @@
-.home-{
+.home- {
+  &about {
+    padding: 12.8rem 19.2rem;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    background-color: #f1f3f4;
 
-    &about{
-        padding: 12.8rem 25.6rem;
-        width: 100%;
-        position: relative;
-        text-align: center;
-        background-color: #F1F3F4;
+    &__text {
+      margin-bottom: 128px;
     }
+    &__cards {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    &__card-item {
+      width: 400px;
+      height: 480px;
+      margin-bottom: 36px;
+    }
+
+    &__card-icon {
+      background-color: #4688f1;
+      width: 178px;
+      height: 178px;
+      margin: 0 auto 32px;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 64px;
+    }
+  }
 }

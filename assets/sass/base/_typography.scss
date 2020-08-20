@@ -1,25 +1,33 @@
-@font-face{
-    font-family: ProductSans;
-    src: url(../fonts/ProductSans.ttf) format('ttf');
-    src: url(../fonts/ProductSans.woff) format('woff');
-    src: url(../fonts/ProductSans.woff2) format('woff2');
-    font-style: normal;
-    font-weight: normal;
-
+@font-face {
+  font-family: ProductSans;
+  src: url(../fonts/ProductSans.ttf) format("ttf");
+  src: url(../fonts/ProductSans.woff) format("woff");
+  src: url(../fonts/ProductSans.woff2) format("woff2");
+  font-style: normal;
+  font-weight: normal;
 }
 
-.heading-text{
-
-    &--main{
-        font-size: 6rem;
-        font-weight: 400;
-    }
+.heading-text {
+  &--main {
+    font-size: 6rem;
+    font-weight: 400;
+  }
 }
 
-.paragraph-text{
+.paragraph-text {
+  &--main {
+    font-size: 24px;
+    color: #2d2e31;
+  }
+  &--sub {
+    font-size: 18px;
+    color: #2d2e31;
+  }
+}
 
-    &--main{
-        font-size: 2.4rem;
-        color: #2D2E31;
-    }
+.subheading-text {
+  &--main {
+    font-size: 32px;
+    font-weight: 400;
+  }
 }
