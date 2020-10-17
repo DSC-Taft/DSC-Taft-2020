@@ -54,6 +54,11 @@ h3
     background-color: var(--blue);
 }
 
+.background-green
+{
+    background-color: var(--green);
+}
+
 .background-grey
 {
     background-color: var(--grey);
@@ -70,6 +75,7 @@ h3
 {
     width: 100%;
     max-width: 100%;
+    min-width: 100%;
 }
 
 .slide
@@ -145,7 +151,7 @@ h3
     max-width: 70%;
     max-height: 70%;
     background-color: var(--grey);
-    border-radius: 3vh;
+    border-radius: 10px;
     padding: 40px;
     object-fit: contain;
     margin-left: auto;
@@ -197,6 +203,16 @@ iframe
     min-width: 40vw;
 }
 
+#fourth
+{
+    transition: 2s;
+}
+
+#postsubmission
+{
+    display: none;
+}
+
 @media (max-width: 1007px)
 {
     .box
@@ -212,5 +228,69 @@ iframe
     #third .column
     {
         max-width: 30vw;
+    }
+}
+
+
+@media (min-device-width: 320px) and (max-device-width: 650px)
+{
+
+    .logo
+    {
+        padding: 15px;
+    }
+
+    .slide, .long-slide
+    {
+        padding: 10vw;
+    }
+    
+    #description
+    {
+        font-size: 0.7em;
+    }
+
+    iframe
+    {
+        padding: 1vw;
+    }
+
+    #third .column
+    {
+        max-width: 40vw;
+    }
+}
+
+@media (max-device-width: 319px)
+{
+
+    .logo
+    {
+        padding: 15px;
+    }
+
+    .slide, .long-slide
+    {
+        padding: 8vw;
+    }
+
+    .content
+    {
+        min-width: 100%;
+    }
+    
+    #description
+    {
+        font-size: 0.7em;
+    }
+
+    iframe
+    {
+        padding: 1vw;
+    }
+
+    #third .column
+    {
+        max-width: 40vw;
     }
 }
