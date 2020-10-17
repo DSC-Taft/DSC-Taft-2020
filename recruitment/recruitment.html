@@ -12,7 +12,6 @@
 </head>
 <body>
     <div id="wrapper">
-
         <div class="slide background-yellow">
             <div class="center">
                 <img src="assets/logo.png" class="logo"/>
@@ -105,7 +104,7 @@
                 </div>
 
                 <div class="content slide-up">
-                    <h2>Inquisitive</h2>
+                    <h2>Open to new things</h2>
                     <h3 class="box">
                         We're flexible with our committees. <b>We believe that you can grow better if you're given enough freedom to explore the different facets of the org.</b> Whether you want to pick design or developer work, you're always welcome to contribute to any project we're working on!
                     </h3>
@@ -125,12 +124,12 @@
                 <div class="content slide-up">
                     <img src="assets/benefit 2.jpg" class="image"/>
                     <h3 class="box">
-                        Access <b>resources and materials</b> curated by students who are actively disrupting the field
+                        Access <b>resources and materials</b> curated by students who are actively exploring the field
                     </h3>
                 </div>
                 <div class="content slide-up">
                     <img src="assets/benefit 3.jpg" class="image"/>
-                    <h3 class="-box">
+                    <h3 class="box">
                         Gain a <b>global network</b> of student developers from across various countries
                     </h3>
                 </div>
@@ -157,13 +156,21 @@
             <h1 class="center">and it's all free! 💸</h1>
         </div>
 
-        <div class="long-slide background-blue">
+        <div id="fourth" class="long-slide background-blue">
             <div class="content slide-up center">
-                <h1 class="color-white">Come aboard.</h1>
+                <div id="presubmission">
+                    <h1 class="color-white presubmission">Come aboard.</h1>
+                    <h2>You've already reached this far. Might as well commit to it.</h2>
+                </div>
+
+                <div id="postsubmission">
+                    <h1 class="color-white presubmission">Thank you! ✨</h1>
+                    <h2>While you're here, we'd love to get to know you better and learn what you're interested in. Feel free to answer the form below—it only takes a few minutes! 🤩</h2>
+                </div>
+
                 <h2 class="box center">
-                    You've already reached this far. Might as well commit to it.
-                </h2>    
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdLvP_FHODnOaTvyvtad22GT_FFeYljn3LadCCa16Ju0JM_Rg/viewform?embedded=true" height="378" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdLvP_FHODnOaTvyvtad22GT_FFeYljn3LadCCa16Ju0JM_Rg/viewform?embedded=true" onload="submitForm()" height="378" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </h2>
             </div>   
         </div>
     </div>
@@ -172,6 +179,8 @@
 </body>
 
 <script>
+
+    var counter = 0;
 
     window.onbeforeunload = function () {
         window.scrollTo(0, 0);
@@ -219,6 +228,28 @@
     }
 
     window.addEventListener('scroll', debounce(slideIn));
+
+    function submitForm()
+    {
+        counter += 1;
+
+        if(counter == 2)
+        {
+            $("#fourth").removeClass("background-blue");
+            $("#fourth").addClass("background-green");
+
+            $("#presubmission").slideUp();
+            $("#postsubmission").slideDown();
+
+            window.scrollTo({
+                top: $("#fourth").offset().top,
+                left: 0,
+                behavior: 'smooth'
+            });
+
+            $("iframe").attr("src", "https://docs.google.com/forms/d/e/1FAIpQLSc3K7bKkGq7tSL10fNgFZBaEAeQ1E2Jv3_IzFDxu8FA7DK3EQ/viewform?embedded=true");
+        }
+    }
 
 </script>
 
