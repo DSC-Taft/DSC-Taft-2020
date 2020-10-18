@@ -264,6 +264,11 @@ iframe
 @media (max-device-width: 319px)
 {
 
+    body
+    {
+        font-size: 70%;
+    }
+
     .logo
     {
         padding: 15px;
@@ -277,11 +282,6 @@ iframe
     .content
     {
         min-width: 100%;
-    }
-    
-    #description
-    {
-        font-size: 0.7em;
     }
 
     iframe
